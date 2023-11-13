@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1106835760671590461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106835760671590460}
+  - component: {fileID: 1106835760671590463}
+  m_Layer: 0
+  m_Name: Behavior Tree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1106835760671590460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106835760671590461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1106835760671590463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106835760671590461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWhenEnabled: 1
+  asynchronousLoad: 0
+  pauseWhenDisabled: 0
+  restartWhenComplete: 1
+  logTaskChanges: 0
+  group: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
+  mBehaviorSource:
+    behaviorName: CardBattle
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(407.3572,-8.733071)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(-2.64279175,98.71374)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-2.64279175,110.628632)"},"ID":2,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"TurnStart","NodeData":{"Offset":"(-701.6473,120.628632)"},"ID":3,"Name":"Turn
+        Start","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-447.323853,117.536118)","Comment":"Dice\nTurn"},"ID":4,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"SetBattlePhase","NodeData":{"Offset":"(-373.178131,132.855835)"},"ID":5,"Name":"Set
+        Battle Phase","Instant":true,"BattlePhasem_BattlePhase":"BattleStart"},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.UnityGameObject.SetActive","NodeData":{"Offset":"(-253.288025,131.587158)"},"ID":6,"Name":"Set
+        Active","Instant":true,"SharedGameObjecttargetGameObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null,"GameObjectmValue":0},"SharedBoolactive":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-144.224411,132.65567)"},"ID":7,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"DiceTurn","NodeData":{"Offset":"(-239.668,120)"},"ID":8,"Name":"Dice
+        Turn","Instant":true,"DicePhasem_DicePhase":"PlayerAttack"},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-125.629265,117.727783)"},"ID":9,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(-235.0769,117.29303)"},"ID":10,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}},{"Type":"AIDiceTurn","NodeData":{"Offset":"(-134.608215,117.287315)"},"ID":11,"Name":"AI
+        Dice Turn","Instant":true,"DicePhasem_DicePhase":"EnemyDefense"},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(-17.2949448,119.130432)"},"ID":12,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}}]},{"Type":"DiceTurn","NodeData":{"Offset":"(-7.84843826,120)"},"ID":13,"Name":"Dice
+        Turn","Instant":true,"DicePhasem_DicePhase":"PlayerDefense"},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(105.339432,116.48645)"},"ID":14,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(-148.780472,120)"},"ID":15,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}},{"Type":"AIDiceTurn","NodeData":{"Offset":"(-38.78048,120)"},"ID":16,"Name":"AI
+        Dice Turn","Instant":true,"DicePhasem_DicePhase":"EnemyAttack"},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(71.21954,120)"},"ID":17,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.UnityGameObject.SetActive","NodeData":{"Offset":"(-31.11176,131.346161)"},"ID":18,"Name":"Set
+        Active","Instant":true,"SharedGameObjecttargetGameObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null,"GameObjectmValue":1},"SharedBoolactive":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"BaseValueCorrection","NodeData":{"Offset":"(111.774673,127.743317)"},"ID":19,"Name":"Base
+        Value Correction","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-142.958542,118.67955)","Comment":"Enemy
+        Turn"},"ID":20,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1.3392849,121.42865)"},"ID":21,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"SetBattlePhase","NodeData":{"Offset":"(-122.536751,133.049271)"},"ID":22,"Name":"Set
+        Battle Phase","Instant":true,"BattlePhasem_BattlePhase":"EnemyTurn"},{"Type":"TriggerEvent","NodeData":{"Offset":"(4.054043,131.891968)"},"ID":23,"Name":"Trigger
+        Event","Instant":true,"BattlePhaseEventsm_BattlePhaseEvents":"OnEnemyTurnStartTrigger"},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(108.491417,130)"},"ID":24,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}},{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(227.202972,126.833656)"},"ID":25,"Name":"Inverter","Instant":true,"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.UntilFailure","NodeData":{"Offset":"(0,101.428589)"},"ID":26,"Name":"Until
+        Failure","Instant":true,"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(3.40624237,107.430305)"},"ID":27,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.BoolComparison","NodeData":{"Offset":"(-355.1469,133.992477)"},"ID":28,"Name":"Bool
+        Comparison","Instant":true,"SharedBoolbool1":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"IsShared":true,"IsDynamic":true,"BooleanmValue":false},"SharedBoolbool2":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-130.217743,130)"},"ID":29,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"IsMeetConditions","NodeData":{"Offset":"(-151.914871,130)"},"ID":30,"Name":"Is
+        Meet Conditions","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.UntilSuccess","NodeData":{"Offset":"(-1.9148922,130)"},"ID":31,"Name":"Until
+        Success","Instant":true,"Children":[{"Type":"AISelectCard","NodeData":{"Offset":"(-3.177063,112.679565)"},"ID":32,"Name":"AI
+        Select Card","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(154.085144,130)"},"ID":33,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":2},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}}]},{"Type":"GenJiaBuff","NodeData":{"Offset":"(50.25836,133.992554)"},"ID":34,"Name":"Gen
+        Jia Buff","Instant":true},{"Type":"ProbabilitySuccess","NodeData":{"Offset":"(193.353577,133.966675)","Comment":"depend
+        on mp"},"ID":35,"Name":"Probability Success","Instant":true,"ProbabilitySeedm_Seed":"DependOnMP","Singlem_InitP":0.8,"Singlem_P":0.8,"Singlem_Step":0.4}]}]}]},{"Type":"TriggerEvent","NodeData":{"Offset":"(335,127.5)"},"ID":36,"Name":"Trigger
+        Event","Instant":true,"BattlePhaseEventsm_BattlePhaseEvents":"OnEnemyTurnStartTrigger"}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(62.8094177,109.250626)","Comment":"Player\nTurn"},"ID":37,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"SetBattlePhase","NodeData":{"Offset":"(-50,127.777771)"},"ID":38,"Name":"Set
+        Battle Phase","Instant":true,"BattlePhasem_BattlePhase":"PlayerTurn"},{"Type":"PlayTurn","NodeData":{"Offset":"(70,126.666656)"},"ID":39,"Name":"Play
+        Turn","Instant":true,"Buttonm_TurnEndBtn":2,"Buttonm_DrawCardBtn":3}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(463.731934,124.118851)","Comment":"Settlement\nTurn"},"ID":40,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"SetBattlePhase","NodeData":{"Offset":"(-195.818817,123.6237)"},"ID":41,"Name":"Set
+        Battle Phase","Instant":true,"BattlePhasem_BattlePhase":"SettlementTurn"},{"Type":"TriggerEvent","NodeData":{"Offset":"(-78.88904,115.555634)"},"ID":42,"Name":"Trigger
+        Event","Instant":true,"BattlePhaseEventsm_BattlePhaseEvents":"OnSettlementTurnTrigger"},{"Type":"SettlementTurn","NodeData":{"Offset":"(36.8421173,123.684212)"},"ID":43,"Name":"Settlement
+        Turn","Instant":true,"PlayerOrEnemym_PlayerOrEnemy":"Enemy"},{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(162.620209,124.688057)"},"ID":44,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"IsHealthUnderParam","NodeData":{"Offset":"(-146.8421,114.269)"},"ID":45,"Name":"Is
+        Health Under Param","Instant":true,"Int32m_HealthThreshold":0,"PlayerOrEnemym_PlayerOrEnemy":"Enemy"},{"Type":"BehaviorDesigner.Runtime.Tasks.Log","NodeData":{"Offset":"(10,107.953217)","Comment":"enemy
+        die"},"ID":46,"Name":"Log","Instant":true,"SharedStringtext":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"enemy
+        die"},"SharedBoollogError":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedBoollogTime":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}}]},{"Type":"SettlementTurn","NodeData":{"Offset":"(284.210541,121.578926)"},"ID":47,"Name":"Settlement
+        Turn","Instant":true,"PlayerOrEnemym_PlayerOrEnemy":"Player"},{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(400.5259,116.8421)"},"ID":48,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"IsHealthUnderParam","NodeData":{"Offset":"(-63.68415,109.34211)"},"ID":49,"Name":"Is
+        Health Under Param","Instant":true,"Int32m_HealthThreshold":0,"PlayerOrEnemym_PlayerOrEnemy":"Player"},{"Type":"BehaviorDesigner.Runtime.Tasks.Log","NodeData":{"Offset":"(92.10525,109.34211)","Comment":"player
+        die"},"ID":50,"Name":"Log","Instant":true,"SharedStringtext":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"player
+        die"},"SharedBoollogError":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedBoollogTime":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}}]}]}]}]}}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        byteData: 
+        byteDataArray: 
+      Version: 1.7.4
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
